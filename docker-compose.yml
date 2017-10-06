@@ -1,11 +1,11 @@
 services:
-  bt_joiner:
+  bt-joiner:
     name: bt-joiner
     image: linarotechnologies/bt-joiner:latest
     privileged: true
     read_only: true
     restart: always
-    network_mode: host
+    network_mode: "host"
     tmpfs:
       - /var/run
       - /var/lock
