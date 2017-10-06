@@ -16,3 +16,11 @@ services:
     read_only: true
     restart: always
     network_mode: "host"
+  nginx-http-proxy:
+    image: linarotechnologies/nginx:latest
+    command: nginx-debug -g 'daemon off;'
+    read_only: true
+    restart: always
+    network_mode: "host"
+    extra_hosts:
+      - "gitci.com:192.168.1.26"
