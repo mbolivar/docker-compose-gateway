@@ -11,3 +11,8 @@ services:
       - /var/run
       - /var/lock
       - /var/log
+  cf-proxy-coap-http:
+    image: linarotechnologies/cf-proxy-coap-http:latest
+    read_only: true
+    restart: always
+    network_mode: "host"
