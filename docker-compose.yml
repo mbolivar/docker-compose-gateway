@@ -1,5 +1,7 @@
+version: '3'
+
 services:
-  bt-joiner:
+  bt_joiner:
     name: bt-joiner
     image: linarotechnologies/bt-joiner:latest
     privileged: true
