@@ -30,7 +30,7 @@ services:
     volumes:
       - /tmp/nginx-http-proxy.conf:/etc/nginx/nginx.conf
   nginx-coap-proxy:
-    image: image: linarotechnologies/nginx:latest
+    image: linarotechnologies/nginx:latest
     command: nginx-debug -g 'daemon off;'
     read_only: true
     restart: always
