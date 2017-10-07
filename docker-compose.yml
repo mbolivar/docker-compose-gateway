@@ -29,3 +29,15 @@ services:
       - /var/cache/nginx
     volumes:
       - /tmp/nginx-http-proxy.conf:/etc/nginx/nginx.conf
+  nginx-coap-proxy:
+    image: image: linarotechnologies/cf-proxy-coap-http:latest
+    command: nginx-debug -g 'daemon off;'
+    read_only: true
+    restart: always
+    network_mode: "host"
+    extra_hosts:
+      - "gitci.com:192.168.1.26"
+    tmpfs:
+      - /var/run
+    volumes:
+      - /tmp/nginx-lwm2m.conf:/etc/nginx/nginx.conf
