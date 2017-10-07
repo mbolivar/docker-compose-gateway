@@ -27,3 +27,5 @@ services:
     tmpfs:
       - /var/run
       - /var/cache/nginx
+    volumes:
+      - /tmp/nginx-http-proxy.conf:/etc/nginx/nginx.conf
